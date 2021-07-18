@@ -14,7 +14,7 @@ export default class ApiOpenweathermap extends EnvOpenweathermap {
     }
 
     public axios = axios.create({
-            baseURL: 'http://api.openweathermap.org/data/2.5/',
+            baseURL: 'https://api.openweathermap.org/data/2.5/',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8',
             }
