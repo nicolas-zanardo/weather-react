@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Weather  Openweathermap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Exercice :
 
-In the project directory, you can run:
+Le but est de faire une mini app en react, de deux pages. L'app peut être un site web en react.
 
-### `npm start`
+- Première page : La première page contient un champ de texte permettant à l'utilisateur d'écrire le nom d'une ville, et de valider son choix
+- Seconde page : La seconde page doit afficher "Il fait froid" si la température dans la ville en question est < à 15°C, et "Il fait chaud" si la température est ≥ 15°C. 
+  
+La couleur du fond d'écran doit aussi changer en fonction de cette température : couleur froide s'il fait froid, chaude s'il fait chaud.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Ressources :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+L'API à utiliser pour connaître la température sera [https://openweathermap.org/](https://openweathermap.org/)
 
-### `npm test`
+### Contraintes :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- La fonctionnalité pour connaître la température sera faite avec une "hook", en imaginant qu'elle pourrait être réutilisée ailleurs.
+- L'utilisation de TypeScript  est un plus et fortement recommandé.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## MISE EN PLACE DE L'APPLICATION
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1 - Creer un fichier env.openweathermap.tsx dans le fichier env
+un fichier env.EXEMPLE.tsx est déjà present pour avoir un exemple
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```TypeScript
+/**
+ * @class EnvEXEMPLE
+ * @description configuration file for api
+ */
+export default class EnvEXEMPLE {
 
-### `npm run eject`
+    protected readonly appid: string = "YOUT_KEY";
+    protected readonly unitsMetric: string = "metric";
+    protected readonly langFr: string = "fr";
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2 - Ligne de Commande :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ ```Bash
+ npm install
+ npm start 
+ ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3 - Si TypeScript n'est pas installé 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```Bash
+sudo npm install -g typescript
+```

@@ -1,0 +1,14 @@
+.container {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  margin: 1em;
+  padding: 1rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    background-color: var(--gray-dark);
+  }
+}
